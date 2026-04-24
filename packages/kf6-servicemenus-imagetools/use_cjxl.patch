@@ -1,0 +1,42 @@
+--- a/bin/imagetools-kdialog	2026-04-24 23:30:44.121419643 +0200
++++ b/bin/imagetools-kdialog	2026-04-24 23:31:09.450400615 +0200
+@@ -100,7 +100,7 @@
+             msg_common_dependency_check_failed_title="Dependency check failed"
+             msg_common_kdialog_not_found_text="kdialog not found. Assuming KDE environment."
+             msg_common_imagemagick_not_found_text="ImageMagick not found."
+-            msg_common_cjpegli_not_found_text="cjpegli not found."
++            msg_common_cjxl_not_found_text="cjxl not found."
+             msg_common_exiftool_not_found_text="ExifTool not found."
+             msg_common_optipng_not_found_text="OptiPNG not found."
+             msg_common_pngquant_not_found_text="pngquant not found."
+@@ -180,9 +180,9 @@
+     exit 2
+ fi
+ 
+-cjpegli_bin=$(which cjpegli)
+-if [ -z "${cjpegli_bin}" ]; then
+-    "${kdialog_bin}" --icon configure --title "${msg_common_dependency_check_failed_title}" --error "${msg_common_cjpegli_not_found_text}"
++cjxl_bin=$(which cjxl)
++if [ -z "${cjxl_bin}" ]; then
++    "${kdialog_bin}" --icon configure --title "${msg_common_dependency_check_failed_title}" --error "${msg_common_cjxl_not_found_text}"
+     exit 2
+ fi
+ 
+@@ -337,7 +337,7 @@
+     local base="${name%.*}"
+     local ext="${name##*.}"
+ 
+-    OUTPUT=$("${cjpegli_bin}" -q ${quality} "${inputfile}" "${dir}/${base}_reencoded-${quality}.${ext}" 2>&1)
++    OUTPUT=$("${cjxl_bin}" -q ${quality} "${inputfile}" "${dir}/${base}_reencoded-${quality}.${ext}" 2>&1)
+ 
+     if [ "${overwrite}" = true ] && [ $? -eq 0 ]; then
+         rm "${inputfile}"
+@@ -371,7 +371,7 @@
+     local tmpfile2
+     tmpfile2=$(mktemp -p "${dir}" --suffix=".${ext}")
+ 
+-    OUTPUT=$("${cjpegli_bin}" -q 70 "${tmpfile}" "${tmpfile2}" 2>&1)
++    OUTPUT=$("${cjxl_bin}" -q 70 "${tmpfile}" "${tmpfile2}" 2>&1)
+     rc=$?
+     if [ $rc -ne 0 ]; then
+         rm "${tmpfile}"
