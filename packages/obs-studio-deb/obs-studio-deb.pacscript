@@ -1,0 +1,11 @@
+pkgname="obs-studio-deb"
+repology=("project: obs-studio")
+arch=('amd64')
+gives="obs-studio"
+pkgver="32.0.4"
+source=("https://github.com/obsproject/obs-studio/releases/download/32.0.4/OBS-Studio-${pkgver}-Ubuntu-24.04-x86_64.deb")
+pkgdesc="Free and open source software for live streaming and screen recording"
+sha256sums=("b146f22a34888bb9854bd7574fc949b00043ba38d222da13f71c180050bf289b")
+maintainer=("villamorrd <villamorrd@students.nu-moa.edu.ph>")
+compatible=("ubuntu:noble")
+license=('GPL-2.0-only')

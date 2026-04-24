@@ -1,0 +1,20 @@
+pkgbase = galaxybudsclient-bin
+	gives = galaxybudsclient
+	pkgver = 5.1.2
+	pkgdesc = Unofficial Galaxy Buds Manager for Windows and Linux
+	url = https://github.com/timschneeb/GalaxyBudsClient
+	arch = amd64
+	arch = arm64
+	arch = armhf
+	depends = bluetooth
+	repology = project: galaxybudsclient
+	source = https://github.com/timschneeb/GalaxyBudsClient/blob/5.1.2/GalaxyBudsClient/Resources/icon.png?raw=true
+	sha256sums = 15783ad016b4fc50395456da8bd4838441582f5394a0731c0038fdc692289d51
+	source_amd64 = https://github.com/timschneeb/GalaxyBudsClient/releases/download/5.1.2/GalaxyBudsClient_Linux_64bit_Portable.bin
+	sha256sums_amd64 = 13e6dee834cff02ff772b8eaebdd5631e1e3e6556b365e6dbb0184c7fa68da00
+	source_arm64 = https://github.com/timschneeb/GalaxyBudsClient/releases/download/5.1.2/GalaxyBudsClient_Linux_arm64_Portable.bin
+	sha256sums_arm64 = 51a1857faa24e52b2dc2b15e2839221bfac707826dac9e0235b9abd9d39d0abd
+	source_armhf = https://github.com/timschneeb/GalaxyBudsClient/releases/download/5.1.2/GalaxyBudsClient_Linux_arm_Portable.bin
+	sha256sums_armhf = cb7c2b7b00a64886b9d04b4411cf47e2a531ccad718fe018fbd633ffe47aaa5a
+
+pkgname = galaxybudsclient-bin

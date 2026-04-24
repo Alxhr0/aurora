@@ -1,0 +1,12 @@
+pkgname="linux-image-unsigned-deb"
+gives="linux-image-unsigned-7.0.0-070000-generic"
+pkgver="7.0"
+buildver="7.0.0-070000.202604122140"
+arch=('arm64' 'amd64')
+sha256sums_arm64=("1ad4a2339db6283aefc88d7f2120a9c7da8f07ad41cac7e228d638f2ee651aa1")
+sha256sums_amd64=("d89bf38a86d680e49d122c254e1fede4fc672a01a2d24cbe0d07b67eac6a9049")
+source=("https://kernel.ubuntu.com/~kernel-ppa/mainline/v${pkgver/\~/-}/${CARCH}/${gives}_${buildver}_${CARCH}.deb")
+pkgdesc="Ubuntu Linux mainline kernel (Unsigned image)"
+pacdeps=("linux-headers-generic-deb" "linux-modules-deb")
+maintainer=("Oren Klopfer <oren@taumoda.com>")
+repology=("project: linux" "repo: aur" "srcname: linux-mainline" "binname: linux-mainline")

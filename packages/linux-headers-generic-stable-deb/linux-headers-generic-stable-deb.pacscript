@@ -1,0 +1,12 @@
+pkgname="linux-headers-generic-stable-deb"
+gives="linux-headers-7.0.0-070000-generic"
+pkgver="7.0"
+buildver="7.0.0-070000.202604122140"
+arch=('arm64' 'amd64')
+sha256sums_arm64=("5dcf4fe1974b174a67090172cf4a02bc169e213045f43334149387774c3b5f4c")
+sha256sums_amd64=("56a70e53d23fe50c00822de71d819899568df27a3f73be77f4ff4c55e62b83b7")
+source=("https://kernel.ubuntu.com/~kernel-ppa/mainline/v${pkgver}/${CARCH}/${gives}_${buildver}_${CARCH}.deb")
+pkgdesc="Ubuntu Linux stable kernel (Generic headers)"
+pacdeps=("linux-headers-stable-deb")
+maintainer=("Oren Klopfer <oren@taumoda.com>")
+repology=("project: linux" "repo: distrowatch")

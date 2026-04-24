@@ -1,0 +1,11 @@
+pkgname="quarto-deb"
+gives="quarto"
+pkgver="1.8.27"
+arch=("amd64" "arm64")
+pkgdesc="Academic, scientific, and technical publishing system built on Pandoc"
+maintainer=("James Ed Randson <jimedrand@disroot.org>")
+source_amd64=("https://github.com/quarto-dev/quarto-cli/releases/download/v${pkgver}/quarto-${pkgver}-linux-amd64.deb")
+sha256sums_amd64=("43678c160c3066b139ce30a741670bc5dc8d732fc6d320579f75bcace59397ae")
+source_arm64=("https://github.com/quarto-dev/quarto-cli/releases/download/v${pkgver}/quarto-${pkgver}-linux-arm64.deb")
+sha256sums_arm64=("21cc945f36d452ff4e2b259008d05000132aa30c49cbc0b69a400103bc5a3269")
+repology=("project: quarto")

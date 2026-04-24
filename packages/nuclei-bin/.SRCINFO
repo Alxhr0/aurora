@@ -1,0 +1,14 @@
+pkgbase = nuclei-bin
+	gives = nuclei
+	pkgver = 3.7.0
+	pkgdesc = Fast and customisable vulnerability scanner based on simple YAML based DSL
+	arch = amd64
+	breaks = nuclei
+	breaks = nuclei-deb
+	breaks = nuclei-git
+	maintainer = Oren Klopfer <oren@taumoda.com>
+	repology = project: nuclei
+	source = @nuclei-bin~3.7.0::https://github.com/projectdiscovery/nuclei/releases/download/v3.7.0/nuclei_3.7.0_linux_amd64.zip
+	sha256sums = aadbae75a5bd2cec08d9e1ae340a4f15dc95c159e9369ed805b36f97e6ee2062
+
+pkgname = nuclei-bin
