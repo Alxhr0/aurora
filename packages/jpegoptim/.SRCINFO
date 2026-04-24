@@ -1,0 +1,12 @@
+pkgbase = jpegoptim
+	pkgver = 1.5.6
+	pkgdesc = utility to optimize/compress JPEG files
+	arch = amd64
+	makedepends = gcc
+	makedepends = make
+	makedepends = libjpeg-dev
+	maintainer = Alxhr0 <alxhr0@proton.me>
+	source = https://github.com/tjko/jpegoptim/archive/refs/tags/v1.5.6.tar.gz
+	sha256sums = 
+
+pkgname = jpegoptim

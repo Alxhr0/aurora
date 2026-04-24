@@ -1,0 +1,15 @@
+pkgbase = kf6-servicemenus-imagetools
+	pkgver = 7.0
+	pkgdesc = KDE service menus for image file processing
+	arch = any
+	depends = libjxl-tools
+	depends = imagemagick
+	depends = optipng
+	depends = pngquant
+	depends = libimage-exiftool-perl
+	pacdeps = jpegoptim
+	pacdeps = oxipng
+	source = @kf6-servicemenus-imagetools~7.0::https://github.com/sharkdp/bat/archive/refs/tags/v7.0.tar.gz
+	sha256sums = 907554a9eff239f256ee8fe05a922aad84febe4fe10a499def72a4557e9eedfb
+
+pkgname = kf6-servicemenus-imagetools

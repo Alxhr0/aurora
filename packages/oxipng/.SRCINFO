@@ -1,0 +1,11 @@
+pkgbase = oxipng
+	pkgver = 10.1.0
+	pkgdesc = Multithreaded PNG optimizer written in Rust
+	arch = any
+	makedepends = cargo
+	makedepends = pkg-config
+	maintainer = Alxhr0 <alxhr0@proton.me>
+	source = @oxipng~10.1.0::https://github.com/oxipng/oxipng/archive/refs/tags/v10.1.0.tar.gz
+	sha256sums = 
+
+pkgname = oxipng
