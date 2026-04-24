@@ -5,7 +5,7 @@ pkgbase = oxipng
 	makedepends = cargo
 	makedepends = pkg-config
 	maintainer = Alxhr0 <alxhr0@proton.me>
-	source = @oxipng~10.1.0::https://github.com/oxipng/oxipng/archive/refs/tags/v10.1.0.tar.gz
-	sha256sums = 
+	source = https://github.com/oxipng/oxipng/archive/refs/tags/v10.1.0.tar.gz
+	sha256sums = 6c5e1d021a844ba730193943ab63ad99e7d9f1089c36f3db59014517ea99cf99
 
 pkgname = oxipng
