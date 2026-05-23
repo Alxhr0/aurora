@@ -9,12 +9,12 @@ external_connection=true
 sha256sums=("6c5e1d021a844ba730193943ab63ad99e7d9f1089c36f3db59014517ea99cf99")
 
 build() {
-  cd "${pkgname}~${pkgver}"
+  cd "${pkgname}-${pkgver}"
   cargo build -j"${NCPU}" --release --locked
 }
 
 package() {
-  cd "${pkgname}~${pkgver}"
+  cd "${pkgname}-${pkgver}"
 
   install -Dm755 target/release/oxipng "${pkgdir}/usr/bin/oxipng"
   install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
