@@ -10,6 +10,7 @@ sha256sums=("ce19b1f060d586ceb3ea682f27d00e41675ec4093d8ac200a61ccd9d967d0999")
 
 build() {
   cd "${pkgname}-${pkgver}"
+  export RUSTUP_TOOLCHAIN=stable
   cargo build -j"${NCPU}" --release --locked
 }
 
