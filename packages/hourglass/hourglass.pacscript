@@ -10,6 +10,7 @@ external_connection=true
 
 build() {
   cd "${pkgname}-${pkgver}"
+  export RUSTUP_TOOLCHAIN=stable
   cargo build -j"${NCPU}" --release
 }
 
