@@ -1,12 +1,12 @@
 pkgname="oxipng"
 arch=("any")
-pkgver="10.1.0"
+pkgver="10.1.1"
 source=("https://github.com/${pkgname}/${pkgname}/archive/refs/tags/v${pkgver}.tar.gz")
-makedepends=("cargo" "pkg-config")
+makedepends=("cargo | rustup" "pkg-config")
 maintainer=("Alxhr0 <alxhr0@proton.me>")
 pkgdesc="Multithreaded PNG optimizer written in Rust "
 external_connection=true
-sha256sums=("6c5e1d021a844ba730193943ab63ad99e7d9f1089c36f3db59014517ea99cf99")
+sha256sums=("ce19b1f060d586ceb3ea682f27d00e41675ec4093d8ac200a61ccd9d967d0999")
 
 build() {
   cd "${pkgname}-${pkgver}"
