@@ -1,6 +1,21 @@
 ### Auto-generated for pacstall-programs
 ### DO NOT EDIT. Use scripts/srcinfo.sh to build.
 ---
+pkgbase = deepinv20-white-cursors-git
+	pkgver = 1.0
+	pkgdesc = This is an x-cursor theme inspired by UOS and based on capitaine-cursors.
+	url = https://github.com/yeyushengfan258/DeepinV20-white-cursors
+	arch = any
+	provides = deepinv20-white-cursors
+	license = GPL-3.0
+	maintainer = Alxhr0 <alxhr0@proton.me>
+	source = https://github.com/yeyushengfan258/DeepinV20-white-cursors.git
+	source = fix-theme-name.patch
+	sha256sums = SKIP
+	sha256sums = ee8055acc48d024bd917ee19075cfd737068d04fb3ca6d1e9d0600166386a3f7
+
+pkgname = deepinv20-white-cursors-git
+---
 pkgbase = hourglass
 	pkgver = 1.4.2
 	pkgdesc = Get install date of the system
