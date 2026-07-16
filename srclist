@@ -75,6 +75,20 @@ pkgbase = odin
 
 pkgname = odin
 ---
+pkgbase = ols-git
+	pkgver = 2026-07a
+	pkgdesc = Language server for Odin
+	url = https://github.com/DanielGavin/ols
+	arch = amd64
+	pacdeps = odin
+	provides = ols
+	license = MIT
+	maintainer = Alxhr0 <alxhr0@proton.me>
+	source = https://github.com/DanielGavin/ols.git
+	sha256sums = SKIP
+
+pkgname = ols-git
+---
 pkgbase = oxipng
 	pkgver = 10.1.1
 	pkgdesc = Multithreaded PNG optimizer written in Rust
