@@ -51,6 +51,7 @@ pkgbase = kf6-servicemenus-imagetools
 	depends = optipng
 	depends = pngquant
 	depends = libimage-exiftool-perl
+	depends = kdialog
 	pacdeps = jpegoptim
 	pacdeps = oxipng
 	license = GPL-3.0

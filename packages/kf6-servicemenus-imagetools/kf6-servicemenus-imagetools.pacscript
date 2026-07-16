@@ -6,7 +6,7 @@ source=(
   "https://github.com/marco-mania/${pkgname}/archive/refs/tags/v${_pkgver}.tar.gz"
   "use_cjxl.patch"
 )
-depends=("libjxl-tools" "imagemagick" "optipng" "pngquant" "libimage-exiftool-perl")
+depends=("libjxl-tools" "imagemagick" "optipng" "pngquant" "libimage-exiftool-perl" "kdialog")
 pacdeps=("jpegoptim" "oxipng")
 pkgdesc="KDE service menus for image file processing "
 maintainer=("Alxhr0 <alxhr0@proton.me>")
