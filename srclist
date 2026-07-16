@@ -44,6 +44,18 @@ pkgbase = kf6-servicemenus-imagetools
 
 pkgname = kf6-servicemenus-imagetools
 ---
+pkgbase = odin
+	pkgver = 2026-07a
+	pkgdesc = Odin Programming Language
+	arch = amd64
+	makedepends = make
+	makedepends = clang
+	maintainer = Alxhr0 <alxhr0@proton.me>
+	source = https://github.com/odin-lang/Odin/archive/refs/tags/dev-2026-07a.tar.gz
+	sha256sums = 8f4f02fd9a3426b441cd0dfbe0aca1b95fd93c95d86940fcb4417ef6044c83cd
+
+pkgname = odin
+---
 pkgbase = oxipng
 	pkgver = 10.1.1
 	pkgdesc = Multithreaded PNG optimizer written in Rust
