@@ -7,6 +7,7 @@ maintainer=("Alxhr0 <alxhr0@proton.me>")
 pkgdesc="Multithreaded PNG optimizer written in Rust "
 external_connection=true
 sha256sums=("ce19b1f060d586ceb3ea682f27d00e41675ec4093d8ac200a61ccd9d967d0999")
+license="MIT"
 
 build() {
   cd "${pkgname}-${pkgver}"
