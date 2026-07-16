@@ -4,7 +4,6 @@ pkgver="1.0"
 pkgdesc="This is an x-cursor theme inspired by UOS and based on capitaine-cursors."
 arch=("any")
 url="https://github.com/yeyushengfan258/DeepinV20-white-cursors"
-license=('GPL')
 provides=("deepinv20-white-cursors")
 maintainer=("Alxhr0 <alxhr0@proton.me>")
 license=("GPL-3.0")
