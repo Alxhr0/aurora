@@ -7,6 +7,7 @@ maintainer=("Alxhr0 <alxhr0@proton.me>")
 pkgdesc="Get install date of the system"
 sha256sums=("e2cb12f91f616a601b8f4d01fc3afbdb0e88efd029f1d091d010e345d574733a")
 external_connection=true
+license="MIT"
 
 build() {
   cd "${pkgname}-${pkgver}"
