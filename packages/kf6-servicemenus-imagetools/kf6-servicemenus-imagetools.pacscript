@@ -14,6 +14,7 @@ sha256sums=(
   "41fa40c0e7c64fae135d88cb963ec5139d550c019d5d8592c9e2924e43a21a58"
   "e121b98bf9ed1c1c570a37a5eaf25109da55fe39ab5859b97007cde40c0931ed"
 )
+license=("GPL-3.0")
 
 prepare() {
   cd "${pkgname}-${_pkgver}"
