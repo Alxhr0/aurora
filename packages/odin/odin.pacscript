@@ -6,6 +6,7 @@ makedepends=("make" "clang")
 maintainer=("Alxhr0 <alxhr0@proton.me>")
 pkgdesc="Odin Programming Language"
 sha256sums=("8f4f02fd9a3426b441cd0dfbe0aca1b95fd93c95d86940fcb4417ef6044c83cd")
+license="Zlib"
 
 build() {
     cd "Odin-dev-${pkgver}"
