@@ -8,22 +8,22 @@ provides=("ols")
 maintainer=("Alxhr0 <alxhr0@proton.me>")
 license=("MIT")
 source=(
-    "https://github.com/DanielGavin/ols.git"
+  "https://github.com/DanielGavin/ols.git"
 )
 sha256sums=(
-    "SKIP"
+  "SKIP"
 )
 pacdeps=("odin")
 
 build() {
-    cd "${_name}"
+  cd "${_name}"
 
-    ./build.sh
+  ./build.sh
 }
 
 package() {
-    cd "${_name}"
+  cd "${_name}"
 
-    mkdir -pv "${pkgdir}/usr/bin"
-    cp ols "${pkgdir}/usr/bin"
+  mkdir -pv "${pkgdir}/usr/bin"
+  cp ols "${pkgdir}/usr/bin"
 }
