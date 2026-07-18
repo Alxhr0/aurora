@@ -12,7 +12,7 @@ license="MIT"
 build() {
   cd "${pkgname}-${pkgver}"
   export RUSTUP_TOOLCHAIN=stable
-  cargo build -j"${NCPU}" --release
+  cargo build -j"${NCPU}" --locked --release
 }
 
 package() {
