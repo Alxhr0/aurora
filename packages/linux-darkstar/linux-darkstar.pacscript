@@ -41,6 +41,7 @@ source=(
   "config.d/0079-no-hp.config"
   "config.d/0080-no-hid-tablets.config"
   "config.d/0086-no-huawei.config"
+  "config.d/0901-no-module-sig.config"
 )
 makedepends=(
     "gcc"
@@ -114,7 +115,7 @@ build() {
   export KCFLAGS="-march=raptorlake -mtune=raptorlake -pipe"
 
   export RUSTUP_TOOLCHAIN=stable
-  make -j"${NCPU}"
+  make -j8
 }
 
 package() {
@@ -145,6 +146,4 @@ package() {
 
   ln -sf "/usr/src/linux-headers-${kver}" \
     "${pkgdir}/lib/modules/${kver}/build"
-
-  install -Dm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}"
 }
