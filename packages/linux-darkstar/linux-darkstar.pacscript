@@ -61,6 +61,7 @@ makedepends=(
     "xz-utils"
     "zlib1g-dev"
     "libzstd-dev"
+    "dwarves"
 )
 maintainer=("Alxhr0 <alxhr0@proton.me>")
 pkgdesc="Custom build of the Linux Kernel"
@@ -119,31 +120,43 @@ build() {
 }
 
 package() {
-  cd "${_name}-${pkgver}"
+    cd "${_name}-${pkgver}"
 
-  local kver
-  kver="$(make -s kernelrelease)"
+    local kver
+    kver="$(make -s kernelrelease)"
 
-  install -Dm644 arch/x86/boot/bzImage \
-    "${pkgdir}/boot/vmlinuz-${kver}"
-  install -Dm644 System.map \
-    "${pkgdir}/boot/System.map-${kver}"
-  install -Dm644 .config \
-    "${pkgdir}/boot/config-${kver}"
+    install -Dm644 arch/x86/boot/bzImage \
+        "${pkgdir}/boot/vmlinuz-${kver}"
+    install -Dm644 System.map \
+        "${pkgdir}/boot/System.map-${kver}"
+    install -Dm644 .config \
+        "${pkgdir}/boot/config-${kver}"
 
-  make INSTALL_MOD_PATH="${pkgdir}" INSTALL_MOD_STRIP=1 modules_install
-  rm -f "${pkgdir}/lib/modules/${kver}/build"
-  rm -f "${pkgdir}/lib/modules/${kver}/source"
+    make INSTALL_MOD_PATH="${pkgdir}" INSTALL_MOD_STRIP=1 modules_install
+    rm -f "${pkgdir}/lib/modules/${kver}/build"
+    rm -f "${pkgdir}/lib/modules/${kver}/source"
 
-  install -dm755 "${pkgdir}/usr/src/linux-headers-${kver}"
-  make INSTALL_HDR_PATH="${pkgdir}/usr" headers_install
-  install -Dm644 Makefile "${pkgdir}/usr/src/linux-headers-${kver}/Makefile"
-  install -Dm644 .config "${pkgdir}/usr/src/linux-headers-${kver}/.config"
-  cp -a scripts "${pkgdir}/usr/src/linux-headers-${kver}/"
-  cp -a include "${pkgdir}/usr/src/linux-headers-${kver}/"
-  [ -f Module.symvers ] && install -Dm644 Module.symvers \
-    "${pkgdir}/usr/src/linux-headers-${kver}/Module.symvers"
+    # prepare a genuinely complete headers tree for DKMS/out-of-tree builds
+    make modules_prepare
 
-  ln -sf "/usr/src/linux-headers-${kver}" \
-    "${pkgdir}/lib/modules/${kver}/build"
+    local hdrdir="${pkgdir}/usr/src/linux-headers-${kver}"
+    install -dm755 "${hdrdir}"
+
+    # copy the whole tree minus build artifacts we don't need to ship,
+    # rather than hand-picking subdirectories (arch/x86/Makefile lives
+    # under arch/, which the minimal copy missed)
+    find . -maxdepth 1 -mindepth 1 \
+        ! -name '.git' \
+        ! -name 'Documentation' \
+        ! -name 'samples' \
+        ! -name '*.tar*' \
+        -exec cp -a {} "${hdrdir}/" \;
+
+    # drop the bulk of driver/module source we don't need for building
+    # out-of-tree modules, keep the Kbuild/Makefile scaffolding
+    find "${hdrdir}/drivers" "${hdrdir}/net" "${hdrdir}/sound" "${hdrdir}/fs" \
+        -type f -name '*.c' -delete 2>/dev/null || true
+
+    ln -sf "/usr/src/linux-headers-${kver}" \
+        "${pkgdir}/lib/modules/${kver}/build"
 }
