@@ -1,11 +1,11 @@
 pkgname="hourglass"
 arch=("amd64")
-pkgver="1.5.0"
+pkgver="1.5.1"
 source=("https://gitlab.com/Alxhr0/${pkgname}/-/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz")
 makedepends=("cargo | rustup")
 maintainer=("Alxhr0 <alxhr0@proton.me>")
 pkgdesc="Get install date of the system"
-sha256sums=("7926b5cd883a5dc3733a7199880ddc352ca29409dc904ca60aaac8bedacd59ea")
+sha256sums=("5a48e91516ca2310bf802a77ce934609389a75e4aebcf557d2ada62ff061b8a3")
 external_connection=true
 license="MIT"
 

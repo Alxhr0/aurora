@@ -1,11 +1,11 @@
 pkgbase = hourglass
-	pkgver = 1.5.0
+	pkgver = 1.5.1
 	pkgdesc = Get install date of the system
 	arch = amd64
 	makedepends = cargo | rustup
 	license = MIT
 	maintainer = Alxhr0 <alxhr0@proton.me>
-	source = https://gitlab.com/Alxhr0/hourglass/-/archive/1.5.0/hourglass-1.5.0.tar.gz
-	sha256sums = 7926b5cd883a5dc3733a7199880ddc352ca29409dc904ca60aaac8bedacd59ea
+	source = https://gitlab.com/Alxhr0/hourglass/-/archive/1.5.1/hourglass-1.5.1.tar.gz
+	sha256sums = 5a48e91516ca2310bf802a77ce934609389a75e4aebcf557d2ada62ff061b8a3
 
 pkgname = hourglass
