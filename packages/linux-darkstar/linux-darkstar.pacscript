@@ -1,7 +1,7 @@
 pkgname="linux-darkstar"
 _name="linux"
 arch=("amd64")
-pkgver="7.1.4"
+pkgver="7.1.5"
 source=(
   "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-${pkgver}.tar.xz"
   "patches/dkms-clang.patch"
@@ -66,7 +66,7 @@ makedepends=(
 maintainer=("Alxhr0 <alxhr0@proton.me>")
 pkgdesc="Custom build of the Linux Kernel"
 sha256sums=(
-  "1c63922a119675d38e3ae0f8f6ee07f15c41a786ab9ed66563749bb8c9a08e2e"
+  "SKIP"
   "SKIP"
   "SKIP"
   "SKIP"
