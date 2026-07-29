@@ -1,4 +1,8 @@
-pkgname="linux-darkstar"
+pkgbase="linux-darkstar"
+pkgname=(
+  "linux-darkstar"
+  "linux-darkstar-headers"
+)
 _name="linux"
 _localversion="darkstar"
 arch=("amd64")
@@ -120,7 +124,7 @@ build() {
   make -j8
 }
 
-package() {
+package_linux-darkstar() {
   cd "${_name}-${pkgver}"
 
   local kver
@@ -128,8 +132,10 @@ package() {
 
   install -Dm644 arch/x86/boot/bzImage \
     "${pkgdir}/boot/vmlinuz-${kver}"
+
   install -Dm644 System.map \
     "${pkgdir}/boot/System.map-${kver}"
+
   install -Dm644 .config \
     "${pkgdir}/boot/config-${kver}"
 
@@ -137,15 +143,15 @@ package() {
   rm -f "${pkgdir}/lib/modules/${kver}/build"
   rm -f "${pkgdir}/lib/modules/${kver}/source"
 
-  # prepare a genuinely complete headers tree for DKMS/out-of-tree builds
   make modules_prepare
+}
+
+package_linux-darkstar-headers() {
+  cd "${_name}-${pkgver}"
 
   local hdrdir="${pkgdir}/usr/src/linux-headers-${kver}"
   install -dm755 "${hdrdir}"
 
-  # copy the whole tree minus build artifacts we don't need to ship,
-  # rather than hand-picking subdirectories (arch/x86/Makefile lives
-  # under arch/, which the minimal copy missed)
   find . -maxdepth 1 -mindepth 1 \
     ! -name '.git' \
     ! -name 'Documentation' \
@@ -158,10 +164,13 @@ package() {
   find "${hdrdir}/drivers" "${hdrdir}/net" "${hdrdir}/sound" "${hdrdir}/fs" \
     -type f -name '*.c' -delete 2>/dev/null || true
 
+  install -dm755 "${pkgdir}/lib/modules/${kver}"
   ln -sf "/usr/src/linux-headers-${kver}" \
     "${pkgdir}/lib/modules/${kver}/build"
+
 }
 
 post_install() {
-  update-initramfs -k "${pkgver}-${_localversion}"
+  depmod -a "${pkgver}-${_localversion}"
+  update-initramfs -c -k "${pkgver}-${_localversion}"
 }

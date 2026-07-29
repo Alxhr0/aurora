@@ -83,3 +83,5 @@ pkgbase = linux-darkstar
 	sha256sums = SKIP
 
 pkgname = linux-darkstar
+
+pkgname = linux-darkstar-headers
