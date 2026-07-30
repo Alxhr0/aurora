@@ -64,6 +64,7 @@ pkgbase = ignis-git
 	makedepends = python3-loguru
 	makedepends = python3-rich
 	pacdeps = ignis-gvc
+	pacdeps = dart-sass-bin
 	license = LGPL-2.1
 	maintainer = Alxhr0 <alxhr0@proton.me>
 	source = https://github.com/ignis-sh/ignis.git
