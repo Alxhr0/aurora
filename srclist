@@ -41,6 +41,35 @@ pkgbase = hourglass
 
 pkgname = hourglass
 ---
+pkgbase = ignis-git
+	pkgver = 0.1.0
+	pkgdesc = Widget framework for building desktop shells, written and configurable in Python
+	arch = amd64
+	makedepends = meson
+	makedepends = ninja-build
+	makedepends = libglib2.0-dev
+	makedepends = libgirepository1.0-dev
+	makedepends = libgtk-4-dev
+	makedepends = libpulse-dev
+	makedepends = pkg-config
+	makedepends = python3
+	makedepends = python3-pip
+	makedepends = python3-installer
+	makedepends = python3-build
+	makedepends = python3-gi
+	makedepends = python3-gi-cairo
+	makedepends = python3-dev
+	makedepends = python3-cairo-dev
+	makedepends = python3-click
+	makedepends = python3-loguru
+	makedepends = python3-rich
+	pacdeps = ignis-gvc
+	license = LGPL-2.1
+	maintainer = Alxhr0 <alxhr0@proton.me>
+	source = https://github.com/ignis-sh/ignis.git
+
+pkgname = ignis-git
+---
 pkgbase = ignis-gvc
 	pkgver = 0.1.0
 	pkgdesc = Standalone libgvc for Ignis
