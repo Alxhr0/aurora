@@ -1,0 +1,12 @@
+pkgbase = dart-sass
+	pkgver = 1.102.0
+	pkgdesc = Reference implementation of Sass, written in Dart.
+	arch = amd64
+	license = MIT
+	maintainer = Alxhr0 <alxhr0@proton.me>
+	source = https://github.com/sass/dart-sass/releases/download/1.102.0/dart-sass-1.102.0-linux-x64.tar.gz
+	source = change-dart-path.patch
+	sha256sums = 2a2ce6036f94534b39356252b1a3d4aa7879ab139c73bf62f7c9b5beafcfc367
+	sha256sums = SKIP
+
+pkgname = dart-sass
