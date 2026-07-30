@@ -219,6 +219,18 @@ pkgbase = pear-desktop-deb
 
 pkgname = pear-desktop-deb
 ---
+pkgbase = rust-coreutils
+	pkgver = 0.9.0
+	pkgdesc = Cross-platform Rust rewrite of the GNU coreutils
+	arch = amd64
+	makedepends = cargo | rustup
+	license = MIT
+	maintainer = Alxhr0 <alxhr0@proton.me>
+	source = https://github.com/uutils/coreutils/archive/refs/tags/0.9.0.tar.gz
+	sha256sums = 
+
+pkgname = rust-coreutils
+---
 pkgbase = wezterm-git
 	pkgver = 20260304
 	pkgdesc = A GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust
