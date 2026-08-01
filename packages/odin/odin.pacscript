@@ -2,6 +2,7 @@ pkgname="odin"
 arch=("amd64")
 pkgver="2026-07a"
 source=("https://github.com/${pkgname}-lang/Odin/archive/refs/tags/dev-${pkgver}.tar.gz")
+depends=("clang")
 makedepends=("make" "clang")
 maintainer=("Alxhr0 <alxhr0@proton.me>")
 pkgdesc="Odin Programming Language"

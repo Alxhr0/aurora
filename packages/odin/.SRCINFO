@@ -2,6 +2,7 @@ pkgbase = odin
 	pkgver = 2026-07a
 	pkgdesc = Odin Programming Language
 	arch = amd64
+	depends = clang
 	makedepends = make
 	makedepends = clang
 	license = Zlib
