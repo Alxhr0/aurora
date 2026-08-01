@@ -4,7 +4,7 @@ pkgver="0.1.0"
 source=(
   "https://github.com/ignis-sh/${pkgname}/archive/refs/tags/v${pkgver}.tar.gz"
 )
-depends=("meson" "ninja-build" "libglib2.0-dev" "libgirepository1.0-dev" "libgtk-4-dev" "libpulse-dev" "pkg-config")
+makedepends=("meson" "ninja-build" "libglib2.0-dev" "libgirepository1.0-dev" "libgtk-4-dev" "libpulse-dev" "pkg-config")
 pkgdesc="Standalone libgvc for Ignis"
 maintainer=("Alxhr0 <alxhr0@proton.me>")
 sha256sums=(

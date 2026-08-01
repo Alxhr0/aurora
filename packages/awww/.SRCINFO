@@ -1,0 +1,12 @@
+pkgbase = awww
+	pkgver = 0.12.1
+	pkgdesc = Answer to your Wayland Wallpaper Woes
+	arch = amd64
+	makedepends = cargo | rustup
+	makedepends = liblz4-dev
+	license = GPL-3.0
+	maintainer = Alxhr0 <alxhr0@proton.me>
+	source = https://codeberg.org/LGFae/awww/archive/v0.12.1.tar.gz
+	sha256sums = 97b3f1c6d65d9d30e51b17092a45244f8c8549607c9207f3c98d82b28ba18fca
+
+pkgname = awww

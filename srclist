@@ -1,6 +1,19 @@
 ### Auto-generated for pacstall-programs
 ### DO NOT EDIT. Use scripts/srcinfo.sh to build.
 ---
+pkgbase = awww
+	pkgver = 0.12.1
+	pkgdesc = Answer to your Wayland Wallpaper Woes
+	arch = amd64
+	makedepends = cargo | rustup
+	makedepends = liblz4-dev
+	license = GPL-3.0
+	maintainer = Alxhr0 <alxhr0@proton.me>
+	source = https://codeberg.org/LGFae/awww/archive/v0.12.1.tar.gz
+	sha256sums = 97b3f1c6d65d9d30e51b17092a45244f8c8549607c9207f3c98d82b28ba18fca
+
+pkgname = awww
+---
 pkgbase = dart-sass
 	pkgver = 1.102.0
 	pkgdesc = Reference implementation of Sass, written in Dart.
@@ -75,13 +88,13 @@ pkgbase = ignis-gvc
 	pkgver = 0.1.0
 	pkgdesc = Standalone libgvc for Ignis
 	arch = amd64
-	depends = meson
-	depends = ninja-build
-	depends = libglib2.0-dev
-	depends = libgirepository1.0-dev
-	depends = libgtk-4-dev
-	depends = libpulse-dev
-	depends = pkg-config
+	makedepends = meson
+	makedepends = ninja-build
+	makedepends = libglib2.0-dev
+	makedepends = libgirepository1.0-dev
+	makedepends = libgtk-4-dev
+	makedepends = libpulse-dev
+	makedepends = pkg-config
 	license = MIT
 	maintainer = Alxhr0 <alxhr0@proton.me>
 	source = https://github.com/ignis-sh/ignis-gvc/archive/refs/tags/v0.1.0.tar.gz
