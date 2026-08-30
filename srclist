@@ -142,7 +142,7 @@ pkgbase = klassy
 	pkgrel = 1
 	pkgdesc = Highly customizable binary Window Decoration, Application Style and Global Theme plugin for recent versions of the KDE Plasma desktop.
 	url = https://github.com/paulmcauley/klassy
-	arch = x86_64
+	arch = amd64
 	depends = breeze-icon-theme
 	depends = hicolor-icon-theme
 	depends = frameworkintegration6
@@ -204,24 +204,6 @@ pkgbase = klassy
 	sha256sums = e6fa56f72ec390764051fb5905ea44d96bb48b072dda6273f31d4fe40fd414ef
 
 pkgname = klassy
-
-pkgname = klassy-qt5
-	depends = klassy
-	depends = breeze-icon-theme
-	depends = frameworkintegration
-	depends = libkf5configcore5
-	depends = libkf5configgui5
-	depends = libkf5configwidgets5
-	depends = libkf5guiaddons5
-	depends = libkf5iconthemes5
-	depends = libkf5kirigami2-5
-	depends = libkf5windowsystem5
-	depends = libqt5core5a
-	depends = libqt5gui5
-	depends = libqt5widgets5
-	depends = libqt5qml5
-	depends = libqt5quick5
-	depends = libqt5svg5
 ---
 pkgbase = linux-darkstar
 	pkgver = 7.1.5

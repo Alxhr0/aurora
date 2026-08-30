@@ -1,11 +1,9 @@
 _pkgname=klassy
-pkgbase="${_pkgname}"
-pkgname=("${_pkgname}"
-  "${_pkgname}-qt5")
-pkgver=6.7
+pkgname="${_pkgname}"
+pkgver="6.7"
 pkgrel=1
-pkgdesc='Highly customizable binary Window Decoration, Application Style and Global Theme plugin for recent versions of the KDE Plasma desktop.'
-arch=(x86_64)
+pkgdesc="Highly customizable binary Window Decoration, Application Style and Global Theme plugin for recent versions of the KDE Plasma desktop."
+arch=('amd64')
 url="https://github.com/paulmcauley/klassy"
 license=('MIT')
 maintainer=("Alxhr0 <alxhr0@proton.me>")
@@ -77,38 +75,33 @@ build() {
     -DBUILD_TESTING=OFF \
     -DBUILD_QT5=OFF
   ninja -C build -j"${NCPU}"
-
-  CMAKE_PREFIX_PATH="/usr/lib/cmake/plasma5" cmake \
-    -B build5 -G Ninja -S "${_pkgname}-${pkgver}" \
-    -DBUILD_TESTING=OFF \
-    -DBUILD_QT6=OFF
-  ninja -C build5 -j"${NCPU}"
 }
 
 package_klassy() {
+  depends=(
+    "breeze-icon-theme"
+    "hicolor-icon-theme"
+    "frameworkintegration6"
+    "libkf6kcmutils6"
+    "libkf6colorscheme6"
+    "libkf6configcore6"
+    "libkf6configgui6"
+    "libkf6coreaddons6"
+    "libkdecorations3-6"
+    "libkf6guiaddons6"
+    "libkf6i18n6"
+    "libkf6iconthemes6"
+    "libkirigami6"
+    "libkf6widgetsaddons6"
+    "libkf6windowsystem6"
+    "libqt6core6"
+    "libqt6gui6"
+    "libqt6widgets6"
+    "libqt6qml6"
+    "libqt6quick6"
+    "libqt6svg6"
+    "xdg-utils"
+  )
   DESTDIR="${pkgdir}" ninja -C build install
   install -Dm644 "${_pkgname}-${pkgver}/LICENSES/MIT.txt" "${pkgdir}/usr/share/licenses/${_pkgname}/MIT.txt"
-}
-
-package_klassy-qt5() {
-  arch=(x86_64)
-  depends=("${_pkgname}"
-    "breeze-icon-theme"
-    "frameworkintegration"
-    "libkf5configcore5"
-    "libkf5configgui5"
-    "libkf5configwidgets5"
-    "libkf5guiaddons5"
-    "libkf5iconthemes5"
-    "libkf5kirigami2-5"
-    "libkf5windowsystem5"
-    "libqt5core5a"
-    "libqt5gui5"
-    "libqt5widgets5"
-    "libqt5qml5"
-    "libqt5quick5"
-    "libqt5svg5")
-  DESTDIR="${pkgdir}" ninja -C build5 install
-  rm -r "${pkgdir}/usr/share/"{color-schemes,kstyle}
-  install -Dm644 "${_pkgname}-${pkgver}/LICENSES/MIT.txt" "${pkgdir}/usr/share/licenses/${_pkgname}-qt5/MIT.txt"
 }

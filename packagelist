@@ -6,9 +6,7 @@ ignis-git
 ignis-gvc
 jpegoptim
 kf6-servicemenus-imagetools
-klassy:pkgbase
-klassy:klassy
-klassy:klassy-qt5
+klassy
 linux-darkstar:pkgbase
 linux-darkstar:linux-darkstar-headers
 linux-darkstar:linux-darkstar
