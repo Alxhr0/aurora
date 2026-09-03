@@ -1,12 +1,12 @@
 pkgname="odin"
 arch=("amd64")
-pkgver="2026-07a"
+pkgver="2026-09"
 source=("https://github.com/${pkgname}-lang/Odin/archive/refs/tags/dev-${pkgver}.tar.gz")
 depends=("clang")
 makedepends=("make" "clang")
 maintainer=("Alxhr0 <alxhr0@proton.me>")
 pkgdesc="Odin Programming Language"
-sha256sums=("8f4f02fd9a3426b441cd0dfbe0aca1b95fd93c95d86940fcb4417ef6044c83cd")
+sha256sums=("f52230de6ad28bed99b4440018cb659c13e3fd78c4521ca3ce661698c1f6135d")
 license="Zlib"
 
 build() {
