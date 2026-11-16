@@ -336,7 +336,7 @@ pkgname = oxipng
 ---
 pkgbase = pear-desktop-deb
 	gives = pear-desktop
-	pkgver = 3.12.0
+	pkgver = 3.12.1
 	pkgdesc = Pear 🍐 is extension for music player
 	arch = amd64
 	breaks = pear-desktop-bin
@@ -344,8 +344,8 @@ pkgbase = pear-desktop-deb
 	replaces = pear-desktop
 	maintainer = Alxhr0 <alxhr0@proton.me>
 	repology = project: pear-desktop
-	source = https://github.com/pear-devs/pear-desktop/releases/download/v3.12.0/youtube-music_3.12.0_amd64.deb
-	sha256sums = cbf8996f565cbe01cd3a37cc9df0e52da3dcc3b889541117b512be7e4f2afde3
+	source = https://github.com/pear-devs/pear-desktop/releases/download/v3.12.1/youtube-music_3.12.1_amd64.deb
+	sha256sums = be08b48dd9d43c8c468e06890dc84cce2950f93d38b4b854d5ccaf0e4127b2d6
 
 pkgname = pear-desktop-deb
 ---
