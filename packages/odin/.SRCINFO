@@ -1,5 +1,5 @@
 pkgbase = odin
-	pkgver = 2026-09
+	pkgver = 2026-11a
 	pkgdesc = Odin Programming Language
 	arch = amd64
 	depends = clang
@@ -7,7 +7,7 @@ pkgbase = odin
 	makedepends = clang
 	license = Zlib
 	maintainer = Alxhr0 <alxhr0@proton.me>
-	source = https://github.com/odin-lang/Odin/archive/refs/tags/dev-2026-09.tar.gz
-	sha256sums = f52230de6ad28bed99b4440018cb659c13e3fd78c4521ca3ce661698c1f6135d
+	source = https://github.com/odin-lang/Odin/archive/refs/tags/dev-2026-11a.tar.gz
+	sha256sums = f8ab36b8d6045d7ae953b60e30edea80d2e616da44b0712d73dd0688d684f278
 
 pkgname = odin
